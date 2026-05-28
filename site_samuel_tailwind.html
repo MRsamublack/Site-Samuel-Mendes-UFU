@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Landing construída incrementalmente no minicurso Tailwind CSS.">
+  <title>Samuel | Frontend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb' } },
+          fontFamily: { sans: ['Urbanist', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-slate-950 font-sans text-slate-100 antialiased">
+  <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#" class="text-lg font-bold tracking-tight text-white">Sam<span class="text-brand-500">Dev</span></a>
+      <nav class="hidden items-center gap-6 md:flex" aria-label="Principal">
+        <a href="#features" class="text-sm font-medium text-slate-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md px-1">Funcionalidades</a>
+        <a href="#cta" class="text-sm font-medium text-slate-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md px-1">Preços</a>
+        <a href="#footer" class="text-sm font-medium text-slate-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md px-1">Contato</a>
+      </nav>
+      <details class="relative md:hidden">
+        <summary class="inline-flex cursor-pointer list-none items-center justify-center rounded-lg border border-slate-700 p-2 text-brand-500 [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+          <i class="fa-solid fa-bars shrink-0 text-xl leading-none" aria-hidden="true"></i>
+          <span class="sr-only">Abrir ou fechar menu</span>
+        </summary>
+        <nav class="absolute right-0 top-[calc(100%+0.5rem)] z-50 min-w-[12rem] rounded-xl border border-slate-800 bg-slate-950 py-2 shadow-xl shadow-black/50 ring-1 ring-white/5" aria-label="Principal (mobile)">
+          <a href="#features" class="block px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-900 hover:text-white focus-visible:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-500">Sobre</a>
+          <a href="#cta" class="block px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-900 hover:text-white focus-visible:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-500">Email</a>
+          <a href="#footer" class="block px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-900 hover:text-white focus-visible:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-500">Módulos</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main>
+    <section class="border-b border-slate-800 bg-gradient-to-b from-slate-950 to-slate-900 py-20 sm:py-24">
+      <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+        <div class="text-center lg:text-left">
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand-500">Samuel presents</p>
+          <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">Frontend moderno com Tailwind CSS</h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">Interfaces modernas, responsivas e minimalistas.</p>
+          <div class="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
+            <a href="#cta" class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3.5 text-base font-semibold text-slate-950 shadow-lg shadow-brand-500/25 transition hover:bg-brand-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">Entrar em contato</a>
+            <a href="../modulo-1-intro-setup.html" class="inline-flex items-center justify-center rounded-full border border-slate-600 px-8 py-3.5 text-base font-semibold text-slate-200 transition hover:border-slate-500 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">Projetos</a>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-2xl border border-slate-800 shadow-2xl shadow-black/40">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80" alt="Equipa a trabalhar em produto digital" width="900" height="600" class="aspect-video h-full w-full object-cover">
+        </div>
+      </div>
+    </section>
+    <section class="border-b border-slate-800 bg-slate-950 py-12" aria-label="Clientes">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <p class="mb-8 text-center text-xs font-semibold uppercase tracking-widest text-slate-500">Jornada Front-end • HTML • CSS • JavaScript • Tailwind CSS</p>
+        <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-60 grayscale">
+          <span class="text-lg font-bold text-slate-400">Tailwind CSS CSS</span>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="border-b border-slate-800 bg-slate-900/40 py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Sobre mim</h2>
+          <p class="mt-4 text-lg text-slate-400">Estudante de Sistemas de Informação focado em frontend.</p>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="group rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-brand-500/5">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/15 text-brand-400"><i class="fa-solid fa-bolt text-xl" aria-hidden="true"></i></div>
+            <h3 class="mt-4 text-lg font-semibold text-white">Modulo 1</h3>
+            <p class="mt-2 text-slate-400">HTML<br>CSS<br>JavaScript</p>
+          </article>
+          <article class="group rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-brand-500/5">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/15 text-brand-400"><i class="fa-solid fa-mobile-screen text-xl" aria-hidden="true"></i></div>
+            <h3 class="mt-4 text-lg font-semibold text-white">Tailwind CSS CSS</h3>
+            <p class="mt-2 text-slate-400">Tailwind CSS</p>
+          </article>
+          <article class="group rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition hover:-translate-y-1 hover:border-slate-600 hover:shadow-xl hover:shadow-brand-500/5 sm:col-span-2 lg:col-span-1">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/15 text-brand-400"><i class="fa-solid fa-palette text-xl" aria-hidden="true"></i></div>
+            <h3 class="mt-4 text-lg font-semibold text-white">Modulo 3</h3>
+            <p class="mt-2 text-slate-400">React em aprendizado</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="cta" class="py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 to-emerald-700 p-8 shadow-2xl sm:p-12 md:p-14">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Vamos construir algo incrível?</h2>
+            <p class="mt-4 text-lg text-emerald-100/90">Entre em contato para networking ou projetos.</p>
+          </div>
+          <form class="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:mx-auto sm:flex-row sm:items-end" action="#" method="post">
+            <div class="flex-1 text-left">
+              <label for="email" class="mb-1 block text-sm font-medium text-emerald-50">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-emerald-200/50 focus:border-white focus:outline-none focus:ring-2 focus:ring-white/40">
+            </div>
+            <button type="submit" class="rounded-xl bg-slate-950 px-8 py-3 font-semibold text-white transition hover:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:shrink-0">enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="border-t border-slate-800 bg-slate-950 py-12">
+    <div class="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
+      <div class="md:col-span-2">
+        <p class="text-lg font-bold text-white">Sam<span class="text-brand-500">Dev</span></p>
+    
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Checklist</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-400">
+          <li><a href="https://gabriell-braga.github.io/Minicursos-Modulo-1---HTML-CSS-JS/index.html#slide-1" class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">Módulo 1 - concluido</a></li>
+          <li><a href="https://gabriell-braga.github.io/Minicursos-Modulo-2---Tailwind CSS/modulo-1-intro-setup.html#slide-1" class="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">Módulo 2 - concluido</a></li>
+          <li><a href="../modulo-3-componentes-estados.html" class="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">Módulo 3 - Em andamento</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Base</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-400">
+          <li><a href="https://gabriell-braga.github.io/Minicursos-Modulo-1---HTML-CSS-JS/index.html#slide-1" target="_blank" rel="noopener noreferrer" class="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">Curso HTML</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="mx-auto mt-12 max-w-6xl px-4 text-center text-xs text-slate-600 sm:px-6 lg:px-8">© 2026 Minicurso Tailwind CSS — Aluno.</p>
+  </footer>
+</body>
+</html>
